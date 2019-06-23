@@ -1,7 +1,7 @@
 package com.example.ex4android;
 
+//packages needed in this class (controllers and view services)
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
         //using the onCreate function in AppCompatActivity class
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        connectButton = (Button)findViewById(R.id.connectButton);
+        connectButton = (Button) findViewById(R.id.connectButton);
         ipNumber = findViewById(R.id.ipNumber);
         portNumber = findViewById(R.id.portNumber);
         connectButton.setOnClickListener(new View.OnClickListener() {
