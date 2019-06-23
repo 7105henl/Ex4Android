@@ -9,19 +9,22 @@ import android.widget.Button;
 import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
+    //members of the MainActivity class
     private Button connectButton;
-    private EditText ip;
-    private EditText port;
+    private EditText ipNumber;
+    private EditText portNumber;
 
-
+    //implement again the onCreate function in the AppCompatActivity given the last instance state saved
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        //using the onCreate function in AppCompatActivity class
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         connectButton = (Button)findViewById(R.id.connectButton);
-        ip = findViewById(R.id.ipNumber);
-        port = findViewById(R.id.portNumber);
+        ipNumber = findViewById(R.id.ipNumber);
+        portNumber = findViewById(R.id.portNumber);
         connectButton.setOnClickListener(new View.OnClickListener() {
+            //implement again the onClick function in the OnClickListener given the view
             @Override
             public void onClick(View view) {
                 operateJoystick();
@@ -29,11 +32,11 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    //operateJoystick function  - runs the actual app after setting the needed parameters
     public void operateJoystick(){
-        int portNum = Integer.parseInt(port.getText().toString());
         Intent intent = new Intent(this, JoystickActivity.class);
-        intent.putExtra("ip", ip.getText().toString());
-        intent.putExtra("port", portNum);
+        intent.putExtra("ip", ipNumber.getText().toString());
+        intent.putExtra("port", Integer.parseInt(portNumber.getText().toString()));
         startActivity(intent);
     }
 }

@@ -6,11 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp"
+    android:background="#00BCD4"
     tools:context=".JoystickActivity">
-
-    <com.example.ex4android.JoystickActivity
-        android:layout_height="match_parent"
-        android:layout_width="match_parent"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
